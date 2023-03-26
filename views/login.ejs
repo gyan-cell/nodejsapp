@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Hello</title>
+  </head>
+  <body>
+    <!-- <p>This is <%=locals %></p>  -->
+    <!--This will give complete object as an output-->
+
+    <!-- <p>This is <%=locals %></p>  -->
+    <!--This will give complete object as an output-->
+    <main>
+      <form method="post" action="/login">
+        <h1>Login Now!</h1>
+        <input type="email" placeholder=" Plz Enter Your Email 📩! " value="<%= locals.email %>" name="email" />
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter Your Password 🔑 !"
+        />
+
+        <p class="error"><%= locals.message %></p>
+
+        <button type="submit">Log in!</button>
+      </form>
+    </main>
+  </body>
+</html>
